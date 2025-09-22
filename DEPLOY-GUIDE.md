@@ -2,11 +2,11 @@
 
 # Instala dependências e gera os arquivos de produção do frontend
 build-app:
-    docker build -t trustreview-app .
+    cd app && docker build -t trustreview-app .
 
 # Constrói a imagem Docker do Nginx personalizada
 build-nginx:
-    docker build -t nginx-trustreview .
+    cd nginx && docker build -t nginx-trustreview .
 
 # Cria a rede Docker para comunicação entre containers
 create-network:
@@ -18,7 +18,7 @@ run-nginx:
 
 # Copia os arquivos gerados do frontend para dentro do container Nginx
 copy-dist:
-    docker cp trustreview-app/dist/. nginx-container:/var/www/html/
+    docker cp app/dist/. nginx-container:/var/www/html/
 
 # Remove o container e a rede para limpeza do ambiente
 clean:
@@ -31,10 +31,10 @@ deploy: build-app build-nginx create-network run-nginx copy-dist
 ## Como atualizar o frontend com o container rodando
 
 1. Gere o novo build do frontend:
-    cd trustreview-app
+    cd app
     npm run build
 
 2. Copie os arquivos gerados para dentro do container:
-    docker cp trustreview-app/dist/. nginx-container:/var/www/html/
+    docker cp app/dist/. nginx-container:/var/www/html/
 
 O Nginx começa a servir o novo conteúdo imediatamente, sem precisar reiniciar o container.

@@ -13,7 +13,7 @@ export const defaultTheme = createTheme({
         },
         background: {
             default: '#FEF7FF',
-            paper: '#FFFFFF',         
+            paper: '#FFFFFF',
         },
         text: {
             primary: '#E6E0E9',
@@ -124,8 +124,9 @@ export const defaultTheme = createTheme({
                 root: {
                     '& .MuiOutlinedInput-root': {
                         backgroundColor: '#FFFFFF',
+                        borderRadius: '10px',
                         '& fieldset': {
-                            borderColor: '#4A4458',
+                            borderColor: '#D5D5D5',
                         },
                         '&:hover fieldset': {
                             borderColor: '#6750A4',
@@ -133,17 +134,27 @@ export const defaultTheme = createTheme({
                         '&.Mui-focused fieldset': {
                             borderColor: '#6750A4',
                         },
+                        '& .MuiInputAdornment-root .MuiSvgIcon-root': {
+                            color: '#4A4458',
+                        },
                     },
                     '& .MuiInputLabel-root': {
-                        color: '#CAC4D0',
+                        color: '#4A4458',
                     },
                     '& .MuiInputLabel-root.Mui-focused': {
                         color: '#6750A4',
                     },
+                    '& input': {
+                        color: '#1D1B20',
+                    },
+                    '& input::placeholder': {
+                        color: '#4A4458',
+                        opacity: 1,
+                    },
                 },
             },
         },
-        
+
         MuiIconButton: {
             styleOverrides: {
                 root: {
