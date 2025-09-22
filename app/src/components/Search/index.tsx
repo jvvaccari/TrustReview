@@ -2,13 +2,15 @@ import { Clear } from '@mui/icons-material';
 import SearchIcon from '@mui/icons-material/Search';
 import { IconButton, InputAdornment, TextField } from '@mui/material';
 
+interface SearchProps {
+    value: string;
+    onChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
+}
+
 const Search = ({
     value,
     onChange,
-}: {
-    value: string;
-    onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
-}) => {
+}: SearchProps) => {
     return (
         <TextField
             value={value}

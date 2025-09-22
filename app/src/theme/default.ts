@@ -109,16 +109,6 @@ export const defaultTheme = createTheme({
             },
         },
 
-        MuiCard: {
-            styleOverrides: {
-                root: {
-                    backgroundColor: '#2B2930',
-                    borderRadius: 16,
-                    boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.3)',
-                },
-            },
-        },
-
         MuiTextField: {
             styleOverrides: {
                 root: {
