@@ -11,9 +11,7 @@ function App() {
     <ThemeProvider theme={defaultTheme}>
       <Stack spacing={4} sx={{ width: '100vw', height: '100vh', bgcolor: 'background.default', alignItems: 'center', justifyContent: 'center' }}>
         <Box width={300}>
-          <Search value={''} onChange={function (e: React.ChangeEvent<HTMLInputElement>): void {
-            throw new Error('Function not implemented.')
-          }} />
+          <Search value={''} onChange={() => {}} />
         </Box>
         <ProductCard productData={{ productId: '1', imageUrl: img_test }} />
         <ProductCard  />
