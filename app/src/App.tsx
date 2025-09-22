@@ -13,10 +13,10 @@ function App() {
       <Stack spacing={4} sx={{ width: '100vw', height: '100vh', bgcolor: 'background.default', alignItems: 'center', justifyContent: 'center' }}>
         <Box width={300}>
           <ProductTitle />
-          <Search value={''} onChange={() => {}} />
+          <Search value={''} onChange={() => { }} />
         </Box>
         <ProductCard productData={{ productId: '1', imageUrl: img_test }} />
-        <ProductCard  />
+        <ProductCard />
       </Stack>
     </ThemeProvider>
   )
